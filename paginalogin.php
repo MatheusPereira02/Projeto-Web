@@ -27,6 +27,7 @@ session_start();
    <input type="checkbox" value="remember-me"> Lembre-me   
   </label>
   </div>
+  
   <br>
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm" >
   <a href="pag1.php" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Logar</a>
