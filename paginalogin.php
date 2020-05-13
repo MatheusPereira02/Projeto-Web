@@ -1,39 +1,53 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <title>Pagina de login</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body background="img/001.jpg" >
+	<head>
+  <title>Pagina Login</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/signin.css" rel="stylesheet">
+	</head>
+	<body background="img/001.jpg" >
+		<div class="container">
+			<div class="form-signin" style="background:#eeee">
+				<?php
+					if(isset($_SESSION['msg'])){
+						echo $_SESSION['msg'];
+						unset($_SESSION['msg']);
+					}
+					if(isset($_SESSION['msgcad'])){
+						echo $_SESSION['msgcad'];
+						unset($_SESSION['msgcad']);
+						
+					}
+				?>
+				<body class="text-center">
+				<img class="mb-10" src="img/002.jpg" alt="" width="200" height="200"> <h5 class="my-5 mr-md-auto font-weight-normal"><b>QUICK APOSTAS</b></h5><br>
+				<h1 class="h3 mb-3 font-weight-normal">LOGIN</h1><br>
+				<form method="POST" action="paginavalida.php">
+					<!--<label>Usuário</label>-->
+					<input type="text" name="usuario" placeholder="Digite o seu usuário" class="form-control" maxlength="25" autofocus="" required=""><br>
 
-<body class="text-center">
-<br><br><br><br><br><br>
-    <form class="form-signin" action="valida.php">
-  <img class="mb-10" src="img/002.jpg" alt="" width="200" height="200"> <h5 class="my-5 mr-md-auto font-weight-normal"><b>QUICK APOSTAS</b></h5><br>
-  <h1 class="h3 mb-3 font-weight-normal">LOGIN</h1><br>
-  <label for="inputEmail" class="sr-only">Digite seu E-mail</label>
-  <input type="email" id="inputEmail" class="form-signin" placeholder="Digite o seu E-mail" required="" autofocus="" maxlength="25" ></br></br>
-  <label for="inputPassword" class="sr-only">Senha</label>
-  <input type="password" class="form-signin" placeholder="Senha" required=""><br>
-  <div class="checkbox mb-1">
-    <label>
-   <input type="checkbox" value="remember-me"> Lembre-me   
-  </label>
-  </div>
-  
-  <br>
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm" >
-  <a href="pag1.php" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Logar</a>
-  <a href="pag4.php" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Esqueci minha senha</a>
+					<!--<label>Senha</label>-->
+					<input type="password" name="senha" placeholder="Digite a sua senha" class="form-control">
+					
+					<input type="checkbox" value="remember-me">Lembre-me<br><br>
 
-</div>	
+					<input type="submit" name="btnLogin" value="Logar" class="btn btn-primary btn-sm">
 
+					<a href="paginaesqueciminhasenha.php"class="btn btn-primary btn-sm" role="button" aria-pressed="true" >Esqueci minha senha</a>
 
+					
+					
+				</form>
+			</div>
+		</div>			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>

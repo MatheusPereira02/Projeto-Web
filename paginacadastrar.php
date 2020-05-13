@@ -42,17 +42,18 @@ if($btnCadUsuario){
 		//var_dump($dados);
 		$dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
 		
-		$result_usuario = "INSERT INTO usuarios (celular, nome, email, usuario, senha) VALUES (
+		$result_usuario = "INSERT INTO usuarios (celular, nome, email, usuario, senha,cpf) VALUES (
 						'" .$dados['celular']. "',
 						'" .$dados['nome']. "',
 						'" .$dados['email']. "',
 						'" .$dados['usuario']. "',
-						'" .$dados['senha']. "'
+						'" .$dados['senha']. "',
+						'" .$dados['cpf']. "'
 						)";
 		$resultado_usario = mysqli_query($conn, $result_usuario);
 		if(mysqli_insert_id($conn)){
 			$_SESSION['msgcad'] = "<div class='alert alert-success'>Usuário cadastrado com sucesso!</div>";
-			header("Location: login.php");
+			header("Location: paginalogin.php");
 		}else{
 			$_SESSION['msg'] = "<div class='alert alert-danger'>Erro ao cadastrar o usuário!</div>";
 		}
@@ -63,6 +64,7 @@ if($btnCadUsuario){
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+	<title>Pagina Cadastro</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +72,7 @@ if($btnCadUsuario){
 		<link href="css/signin.css" rel="stylesheet">
 	</head>
 	<body background="img/001.jpg">
-			<div class="form-signin" style="background:#000000;">
+			<div class="form-signin" style="background:#eee">
 			<body class="text-center">
 				<img class="mb-10" src="img/002.jpg"  width="200" height="200"> <h5 class="my-5 mr-md-auto font-weight-normal"><b>QUICK APOSTAS</b></h5>
 				<h2>Formul&aacute;rio cadastro </h2><br>
@@ -88,11 +90,11 @@ if($btnCadUsuario){
 	 <input type="text" name="cpf" placeholder="Digite seu cpf"  class="form-control">
 	 <input type="text" name="celular" placeholder="Digite seu número de celular "  class="form-control"> 
 	<br><input type="radio" required="required"> <b>Certifico que tenho mais de 18 anos de idade e concordo com os termos. </p></b></br>
-					<input type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-primary">
-					<div class="row text-center" style="margin-top: 20px;"> 
-						Lembrou? <a href="login.php">Clique aqui</a> para logar
-					</div>
+					<input type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-primary" >
+					
+					
 				</form>
+				
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -1,8 +1,8 @@
 <?php
-	$servidor = "localhost";
-	$usuario = "root";
-	$senha = "";
-	$dbname = "celke";
-	
-	//Criar a conexao
-	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+$servidor = "localhost";
+$usuario = "matheus";
+$senha = "pereira";
+$dbname = "siteapostas";
+
+//Criar a conexao
+$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
