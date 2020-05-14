@@ -32,7 +32,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 			$mail = new SendGrid\Mail($from, $subject, $to, $content);
 			
 			//Necessário inserir a chave
-			$apiKey = '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';
+			$apiKey = '';
 			$sg = new \SendGrid($apiKey);
 	
 			$response = $sg->client->mail()->send()->post($mail);
