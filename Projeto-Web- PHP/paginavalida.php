@@ -29,11 +29,5 @@ if($btnLogin){
 			header("Location:paginalogin.php");
 			}
 		}
-		
-	}else{
-		$_SESSION['msg'] = "<div class='alert alert-success'>Mensagem Enviada com sucesso! Por favor verificar seu e-mail.</div>";
-		header("Location:paginaesqueciminhasenha.php");
-		}
-
-
+	}
 		
