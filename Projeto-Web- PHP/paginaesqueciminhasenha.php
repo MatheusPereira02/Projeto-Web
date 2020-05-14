@@ -2,6 +2,7 @@
 <?php
 session_start();
 ?>
+
 <!doctype html>
 <html>
   <head>
@@ -14,7 +15,7 @@ session_start();
 
   </head>
   <body background="img/001.jpg">
-    
+  <?php echo verifica_dados($con);?>
 <div class="container">
   <?php
            
@@ -30,7 +31,7 @@ session_start();
            <hr> <br><br><br> <br>");
            $mail = new SendGrid\Mail( $from,$subject, $to, $content);
            //Necessário inserir a chave
-           $apiKey = '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';
+           $apiKey = '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';
            $sg = new SendGrid($apiKey);
 
            $response = $sg->client->mail()->send()->post($mail);
@@ -51,7 +52,7 @@ session_start();
   <input type="hidden" name="env" value="form">
   </form>
 
-
+  
       </div>
     </div>
     <!-- Optional JavaScript -->
@@ -61,4 +62,3 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   </body>
 </html>
-<?php echo verifica_dados($con);?>
