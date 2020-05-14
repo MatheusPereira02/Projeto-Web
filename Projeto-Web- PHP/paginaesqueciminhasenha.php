@@ -16,7 +16,7 @@ session_start();
   <body background="img/001.jpg">
     
 <div class="container">
-<?php
+  <?php
            
            require 'vendor/autoload.php';
            
@@ -30,7 +30,7 @@ session_start();
            <hr> <br><br><br> <br>");
            $mail = new SendGrid\Mail( $from,$subject, $to, $content);
            //Necessário inserir a chave
-           $apiKey = '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';
+           $apiKey = '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';
            $sg = new SendGrid($apiKey);
 
            $response = $sg->client->mail()->send()->post($mail);
