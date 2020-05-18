@@ -53,7 +53,7 @@ CREATE TABLE `usuarios` (
 --
 -- Estrutura da tabela `usuarioscadastrojogos`
 --
-CREATE TABLE `usuarioscadastrojogos` (
+CREATE TABLE `usercadastrojogos` (
   `id` int(11) NOT NULL,
   `timevisitante` varchar(220) NOT NULL,
   `datajogo` date NOT NULL,
@@ -78,7 +78,7 @@ INSERT INTO `usuarios` (`id`, `celular`, `nome`, `email`, `usuario`, `senha`, `c
 -- Extraindo dados da tabela `usuarioscadastrojogos`
 --
 
-INSERT INTO `usuarioscadastrojogos` (`id`, `timevisitante`, `datajogo`,  `horario`,  `nome`, `valor`, `localjogo`, `campeonato`, `timedacasa`, `created`, `modified`) VALUES
+INSERT INTO `usercadastrojogos` (`id`, `timevisitante`, `datajogo`,  `horario`,  `nome`, `valor`, `localjogo`, `campeonato`, `timedacasa`, `created`, `modified`) VALUES
 ('0', 'flamengo', '0001-01-20', '15hrs', 'teste','35','maracana', 'brasileiro', 'fluminense', '2020-05-17 21:44:18', NULL);
 --
 -- Indexes for table `recover_solicitation`
@@ -97,7 +97,7 @@ ALTER TABLE `usuarios`
 --
 -- Índices para tabela `usuarioscadastrojogos`
 --
-ALTER TABLE `usuarioscadastrojogos`
+ALTER TABLE `usercadastrojogos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -113,7 +113,7 @@ ALTER TABLE `usuarios`
   COMMIT;
 
 
-ALTER TABLE `usuarioscadastrojogos`
+ALTER TABLE `usercadastrojogos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

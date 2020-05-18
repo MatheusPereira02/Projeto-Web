@@ -13,7 +13,7 @@ $horario = filter_input(INPUT_POST, 'horario', FILTER_SANITIZE_STRING);
 
 
 
-$result_usuario = "INSERT INTO usuarioscadastrojogos (nome,campeonato, timedacasa,timevisitante,localjogo,valor,datajogo, horario, created) VALUES ('$nome', '$campeonato','$timedacasa','$timevisitante','$localjogo','$valor','$datajogo','$horario', NOW())";
+$result_usuario = "INSERT INTO usercadastrojogos (nome,campeonato, timedacasa,timevisitante,localjogo,valor,datajogo, horario, created) VALUES ('$nome', '$campeonato','$timedacasa','$timevisitante','$localjogo','$valor','$datajogo','$horario', NOW())";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_insert_id($conn)){

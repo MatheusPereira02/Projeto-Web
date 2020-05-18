@@ -36,7 +36,7 @@ include_once("conexao.php");
 		//calcular o inicio visualização
 		$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
 		
-		$result_usuarios = "SELECT * FROM usuarioscadastrojogos LIMIT $inicio, $qnt_result_pg";
+		$result_usuarios = "SELECT * FROM usercadastrojogos LIMIT $inicio, $qnt_result_pg";
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
 		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
 			echo "ID: " . $row_usuario['id'] . "<br>";
