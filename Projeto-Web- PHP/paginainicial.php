@@ -25,16 +25,16 @@
 
 
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"><a href="paginaesqueciminhasenha.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>FLAMENGO<!---->  0  VASCO<!-- --> 0</strong></br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="https://www.youtube.com/" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>FLUMINENSE<!-- -->  0  BOTAFOGO<!-- --> 0</strong><br>SÉRIA A</a></li>
-  <li class="list-group-item"><a href="paginaesqueciminhasenha.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>AVAI<!---->  0  FORTALEZA<!-- --> 0</strong><br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="https://www.youtube.com/" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>GREMIO<!-- -->  0  CORINTHIAS<!-- --> 0</strong><br>SÉRIA A</a></li>
-  <li class="list-group-item"><a href="paginaesqueciminhasenha.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>CHAPECOENSE<!---->  0  VITORIA<!-- --> 0</strong><br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="https://www.youtube.com/" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>CRUZEIRO<!-- -->  0  GOÍAS<!-- --> 0</strong><br>SÉRIA A</a></li>
-  <li class="list-group-item"><a href="paginaesqueciminhasenha.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>CORITIBA<!---->  0  SANTOS<!-- --> 0</strong><br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="https://www.youtube.com/" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>SÃO PAULO<!-- -->  0  CEARÁ<!-- --> 0</strong><br>SÉRIA A</a></li>
-  <li class="list-group-item"><a href="paginaesqueciminhasenha.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>PALMEIRAS<!---->  0  CUIABÁ<!-- --> 0</strong><br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="https://www.youtube.com/" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>GUARANI<!-- -->  0  PARANÁ<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="detalhejogo.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>FLAMENGO<!---->  0  VASCO<!-- --> 0</strong></br>SÉRIA A </a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>FLUMINENSE<!-- -->  0  BOTAFOGO<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>AVAI<!---->  0  FORTALEZA<!-- --> 0</strong><br>SÉRIA A </a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>GREMIO<!-- -->  0  CORINTHIAS<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>CHAPECOENSE<!---->  0  VITORIA<!-- --> 0</strong><br>SÉRIA A </a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>CRUZEIRO<!-- -->  0  GOÍAS<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>CORITIBA<!---->  0  SANTOS<!-- --> 0</strong><br>SÉRIA A </a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>SÃO PAULO<!-- -->  0  CEARÁ<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>PALMEIRAS<!---->  0  CUIABÁ<!-- --> 0</strong><br>SÉRIA A </a></li>
+  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>GUARANI<!-- -->  0  PARANÁ<!-- --> 0</strong><br>SÉRIA A</a></li>
 </ul>
 
 <div class="text-left">
