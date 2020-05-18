@@ -49,14 +49,37 @@ CREATE TABLE `usuarios` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+
+--
+-- Estrutura da tabela `usuarioscadastrojogos`
+--
+CREATE TABLE `usuarioscadastrojogos` (
+  `id` int(11) NOT NULL,
+  `timevisitante` varchar(220) NOT NULL,
+  `datajogo` date NOT NULL,
+  `horario` int(220) NOT NULL,
+  `nome` varchar(220) NOT NULL,
+  `valor` int(220) NOT NULL,
+  `localjogo` varchar(220) NOT NULL,
+  `campeonato` varchar(220) NOT NULL,
+  `timedacasa` varchar(220) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `celular`, `nome`, `email`, `usuario`, `senha`, `cpf`, `created`, `modified`) VALUES
-('1', '981246594', 'teste', 'teste@hotmail.com', 'teste@hotmail.com', '$2y$10$d8Hpwwj/DENEW4sBuUDvUuCw4/2QgEoWvs8YlAXASltHqw5w7vKDm', '15549122796', '2017-11-12 22:35:47', NULL);
+('0', '981246594', 'teste', 'teste@hotmail.com', 'teste@hotmail.com', '$2y$10$d8Hpwwj/DENEW4sBuUDvUuCw4/2QgEoWvs8YlAXASltHqw5w7vKDm', '15549122796', '2017-11-12 22:35:47', NULL);
 
+--
+-- Extraindo dados da tabela `usuarioscadastrojogos`
+--
 
+INSERT INTO `usuarioscadastrojogos` (`id`, `timevisitante`, `datajogo`,  `horario`,  `nome`, `valor`, `localjogo`, `campeonato`, `timedacasa`, `created`, `modified`) VALUES
+('0', 'flamengo', '0001-01-20', '15hrs', 'teste','35','maracana', 'brasileiro', 'fluminense', '2020-05-17 21:44:18', NULL);
 --
 -- Indexes for table `recover_solicitation`
 --
@@ -70,6 +93,13 @@ ALTER TABLE `recover_solicitation`
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
+
+--
+-- Índices para tabela `usuarioscadastrojogos`
+--
+ALTER TABLE `usuarioscadastrojogos`
+  ADD PRIMARY KEY (`id`);
+
 --
 -- AUTO_INCREMENT for table `recover_solicitation`
 --
@@ -79,9 +109,13 @@ ALTER TABLE `recover_solicitation`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
   COMMIT;
 
+
+ALTER TABLE `usuarioscadastrojogos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
