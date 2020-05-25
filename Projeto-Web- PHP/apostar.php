@@ -52,33 +52,30 @@
 
   <div class="ui container" style="margin-top: 60px;margin-bottom: 60px;">
     <div class="ui large header">Registrar uma aposta</div>
-    <p>Preencha os campos com os resultados desejados e a quantidade de apostas</p>
+    <p>Preencha os campos com os resultados desejados e a quantidade de apostas</p></br></br>
 
     <div class="column" style="display: flex;  justify-content: center;">
                 <div class="card">
                             <div class="time_casa">
-                                <img src="./images/bandeira_brasil.PNG" width="180" height="100">
+                                <img src="img/flamengo.png" width="180" height="100">
                                 <div class="nome_time">
-                                   <p align="center"> Brasil<br><br>
-      
+                                   <p align="center"> Flamengo <br><br>
                                    <input type="number">
-
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="card">
-                            <div class="versus"><br><br>
+       
+                            <div class="versus"><br><br></br>
                                 X
                             </div> 
-                            </div>
+                            
 
                             <div class="card">
                             <div class="time_fora">
-                                <img src="./images/bandeira_suica.jpg" width="180" height="100">
+                                <img src="img/vasco.png" width="180" height="100">
                                 <div class="nome_time">
-                                <p align="center"> Suiça<br><br>
+                                <p align="center"> Vasco<br><br>
                                 <input type="number">
                                 </div>
                                 </div>
@@ -90,22 +87,42 @@
                     <div class="column" style="display: flex;  justify-content: center;">
                     <div class="card">
                     <p align="center">Apostar</p>
-                     <div class="ui input">
-                   <input type="number" id="quantidade-apostas" value="1" > x R$ 15,00
-                    </div>
-                     <br>
+                  
+
+                     <form method="POST" >
+	                 <input name="numero" id="numero" value="0" onblur="soma()"> x R$ 10,00<br><br>
+                   
+                   
                   <div class="total">
-                     <p align="center">TOTAL: R$ <span>0.00</span>
+                     <p align="center">TOTAL: R$  <input name="resultado" readonly id="total" disabled></span>
                  </div>
+                 </form>
                 </div>
                 </div>
                  <br>
 
          <div style="text-align: center; ">
-        <a href="administrativo.php" class=" btn btn-success btn-sm active" >Registrar Aposta</a>
+        <a href="apostas.php" class=" btn btn-success btn-sm active" >Registrar Aposta</a>
         </div>
-     
         
+        <script type="text/javascript">
+function id(valor_campo)
+{
+	return document.getElementById(valor_campo);
+}
+function getValor(valor_campo)
+{
+	var valor = document.getElementById(valor_campo).value.replace( ',', '.');
+	return parseFloat( valor ) * 1;
+}
+
+function soma()
+{
+	var total = getValor('numero');
+	id('total').value = total*10;
+}
+</script>
+
 </div>
 </body>
 </html>
