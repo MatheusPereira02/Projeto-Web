@@ -1,6 +1,11 @@
-<html lang="en"><head>
+<?php
+session_start();
+?>
+
+<html lang="en">
+    <head>
     <meta charset="utf-8">
-    <title>Aposte Já</title>
+    <title>Apostar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body background="" >
+<body>
 
 
 
@@ -50,78 +55,61 @@
     </div>
 
 
+    <?php
+		if(isset($_SESSION['msg'])){
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+		}
+		?>
+
   <div class="ui container" style="margin-top: 60px;margin-bottom: 60px;">
-    <div class="ui large header">Registrar uma aposta</div>
-    <p>Preencha os campos com os resultados desejados e a quantidade de apostas</p></br></br>
-
-    <div class="column" style="display: flex;  justify-content: center;">
-                <div class="card">
-                            <div class="time_casa">
-                                <img src="img/flamengo.png" width="180" height="100">
-                                <div class="nome_time">
-                                   <p align="center"> Flamengo <br><br>
-                                   <input type="number">
-                                </div>
-                            </div>
-                        </div>
-
-       
-                            <div class="versus"><br><br></br>
-                                X
-                            </div> 
-                            
-
-                            <div class="card">
-                            <div class="time_fora">
-                                <img src="img/vasco.png" width="180" height="100">
-                                <div class="nome_time">
-                                <p align="center"> Vasco<br><br>
-                                <input type="number">
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        </br>
-
-                
-                    <div class="column" style="display: flex;  justify-content: center;">
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm" >
+    <div class="ui large header"> <p class="font-weight-bolder">Registrar uma aposta
+    </br>Preencha os campos com os resultados desejados e a quantidade de apostas</p>
+     </div>
+    </div>
+    </br>
+    <form method="POST" action="processaaposta.php">
+    
+<div class="card">
+            <p align="center">
+            FLAMENGO<img src="img/flamengo.png" width="180" height="100"><img src="img/vasco.png" width="180" height="100">VASCO</br>
+			<input type="number" name="timedacasa">
+			<input type="number" name="timedefora">
+             </p></br>
+           
+                   
+             <div class="column" style="display: flex;  justify-content: center;">
                     <div class="card">
-                    <p align="center">Apostar</p>
-                  
+                    <p align="center">APOSTAR</p>
+		   <input name="numero" id="numero" onblur="multiplica()"><p align="center"> x R$ 10,00<br><br>
+           TOTAL:R$<input name="total" readonly id="total"></span></br>
 
-                     <form method="POST" >
-	                 <input name="numero" id="numero" value="0" onblur="soma()"> x R$ 10,00<br><br>
-                   
-                   
-                  <div class="total">
-                     <p align="center">TOTAL: R$  <input name="resultado" readonly id="total" disabled></span>
-                 </div>
-                 </form>
-                </div>
-                </div>
-                 <br>
 
-         <div style="text-align: center; ">
-        <a href="apostas.php" class=" btn btn-success btn-sm active" >Registrar Aposta</a>
-        </div>
-        
+           <div style="text-align: center; "></br>
+           <input type="submit" value="Registrar Aposta" class="btn btn-success btn-sm active">
+           </div>
+    </form>
+
+  
+    
         <script type="text/javascript">
-function id(valor_campo)
-{
+        function id(valor_campo)
+        {
 	return document.getElementById(valor_campo);
-}
-function getValor(valor_campo)
-{
+        }
+    function getValor(valor_campo)
+    {
 	var valor = document.getElementById(valor_campo).value.replace( ',', '.');
 	return parseFloat( valor ) * 1;
-}
+    }
 
-function soma()
-{
+    function multiplica()
+    {
 	var total = getValor('numero');
 	id('total').value = total*10;
-}
-</script>
+    }
+    </script>
 
 </div>
 </body>

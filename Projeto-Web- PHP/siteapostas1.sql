@@ -38,9 +38,31 @@ CREATE TABLE `recover_solicitation` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usercadastrojogos`
+-- Estrutura da tabela `userregistroapostas`
+--
+CREATE TABLE `userregistroaposta` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(220) NOT NULL,
+  `timedacasa` int(220) NOT NULL,
+  `timedefora` int(220) NOT NULL,
+  `total` int(220) NOT NULL,
+  `numero` int(220) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `usuarios`
 --
 
+INSERT INTO `userregistroaposta` (`id`, `nome`, `timedacasa`, `timedefora`,`total`,`numero`,`created`, `modified`) VALUES
+(1, 'Cesar','cesar@celke.com.br','teste','25','35','2017-11-12 22:35:47', NULL);
+-- --------------------------------------------------------
+
+
+--
+-- Estrutura da tabela `usercadastrojogos`
+--
 CREATE TABLE `usercadastrojogos` (
   `id` int(11) NOT NULL,
   `timevisitante` varchar(220) NOT NULL,
@@ -60,8 +82,7 @@ CREATE TABLE `usercadastrojogos` (
 --
 
 INSERT INTO `usercadastrojogos` (`id`, `timevisitante`, `datajogo`, `horario`, `nome`, `valor`, `localjogo`, `campeonato`, `timedacasa`, `created`, `modified`) VALUES
-(0, 'flamengo', '0001-01-20', 15, 'teste', 35, 'maracana', 'brasileiro', 'fluminense', '2020-05-17 21:44:18', NULL),
-(1, 'Fluminese', '2020-07-21', 15, '', 35, 'Maracanã', 'Brasileiro', 'Flamengo', '2020-05-18 20:35:14', NULL);
+(0, 'flamengo', '0001-01-20', 15, 'teste', 35, 'maracana', 'brasileiro', 'vasco', '2020-05-17 21:44:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -92,6 +113,9 @@ INSERT INTO `usuarios` (`id`, `celular`, `nome`, `email`, `usuario`, `senha`, `c
 -- Índices para tabelas despejadas
 --
 
+ALTER TABLE `userregistroaposta`
+  ADD PRIMARY KEY (`id`);
+
 --
 -- Índices para tabela `recover_solicitation`
 --
@@ -113,7 +137,8 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
-
+ALTER TABLE `userregistroaposta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- AUTO_INCREMENT de tabela `recover_solicitation`
 --
