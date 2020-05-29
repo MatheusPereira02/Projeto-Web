@@ -48,11 +48,12 @@
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
 		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
 			echo "ID: " . $row_usuario['id'] . "<br>";
-			echo "Nome: " . $row_usuario['nome'] . "<br>";
+			echo "Nome: " .$_SESSION['nome']."</br>";
 			echo "timedacasa: " . $row_usuario['timedacasa'] ."<br>";
             echo "timedefora: " . $row_usuario['timedefora'] . "<br>";
             echo "Aposta: " . $row_usuario['total'] . "<br>";
-            echo "Valor: " . $row_usuario['numero'] . "<br></br>";
+			echo "Valor: " . $row_usuario['numero'] . "<br></br>";
+			
             
 
 		}

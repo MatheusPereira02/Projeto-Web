@@ -15,20 +15,36 @@
 <body background="img/004.jpg" >
 
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm" >
+<div class="d-flex flex-column flex-md-row align-items-center p-0 px-md-5 mb-0 bg-white border-bottom shadow-sm" >
 <img src="img/002.jpg" width="30" height="30" class="d-inline-block left-top">
   <h5 class="my-1 mr-md-auto font-weight-normal"><b>QUICK APOSTAS</b></h5>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="nav-link" href="loginadm.php">Painel Administrativo</a>
+        <a class="nav-link" href="apostas.php">Minhas Apostas</a>
+        <a class="nav-link" href="">Minha Conta </a>
+        <a class="nav-link" href="">Comprar Cash</a>
+        <a class="nav-link" href="paginasair.php">Sair</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
   <?php
-session_start();
-if(!empty($_SESSION['id'])){
+  session_start();
+  if(!empty($_SESSION['id'])){
 	echo "" .$_SESSION['nome']."</br><!---->0,00 BRL<!----> </br>";
 }
 ?>
-<a class="btn btn-outline-primary" href="loginadm.php">Painel Administrativo</a>
-<a class="btn btn-outline-primary" href="apostas.php">Minhas Apostas</a>
-<a class="btn btn-outline-primary" href="paginasair.php">Sair</a>
 </div>
 
+  
 
 <ul class="list-group list-group-horizontal">
   <li class="list-group-item"><a href="detalhejogologado.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>FLAMENGO<!---->  0  VASCO<!-- --> 0</strong></br>SÉRIA A </a></li>

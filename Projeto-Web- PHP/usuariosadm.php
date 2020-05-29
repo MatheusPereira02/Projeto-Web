@@ -13,8 +13,8 @@ include_once("conexao.php");
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>	
-    <title>Usuários Administrativos</title>
+  <title>Usuários Administrativos</title>
+	</head>	
 	<body background="img/001.jpg" >
 	<div class="container">
 	<div class="form-signin" style="background: #eeee">
@@ -22,7 +22,6 @@ include_once("conexao.php");
 	<img src="img/002.jpg" width="30" height="30" class="d-inline-block left-top">
   	<h5 class="my-1 mr-md-auto ">QUICK APOSTAS</h5>
 	</div>
-	<body>
     <div class="text-center">
         <h1>Usuários Administratitvos</h1>
     </div>
