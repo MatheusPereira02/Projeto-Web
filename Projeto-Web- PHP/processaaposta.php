@@ -15,7 +15,7 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_insert_id($conn)){
 	$_SESSION['msg'] = "<p style='color:green;'>Aposta registrada com sucesso!</p>";
-	header("Location: apostar.php");
+	header("Location: administrativo.php");
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Aposta não registrada com sucesso!</p>";
 	header("Location: apostar.php");

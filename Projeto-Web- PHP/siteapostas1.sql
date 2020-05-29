@@ -86,8 +86,25 @@ INSERT INTO `usercadastrojogos` (`id`, `timevisitante`, `datajogo`, `horario`, `
 
 -- --------------------------------------------------------
 
+CREATE TABLE `useradm` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(220) NOT NULL,
+  `email` varchar(220) NOT NULL,
+  `senha` varchar(220) NOT NULL,
+  `cargo` varchar(220) NOT NULL,
+  `situacoe_id` int(11) NOT NULL,
+  `niveis_acesso_id` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `useradm` (`id`, `nome`, `email`, `senha`, `situacoe_id`, `niveis_acesso_id`, `created`, `modified`) VALUES
+(1, 'Cesar Szpak', 'cesar@celke.com.br', '202cb962ac59075b964b07152d234b70', 1, 1, '2016-03-25 01:01:01', NULL);
+
+
 --
--- Estrutura da tabela `usuarios`
+-- Dumping data for table `usuarios`
+--
 --
 
 CREATE TABLE `usuarios` (
@@ -111,6 +128,7 @@ INSERT INTO `usuarios` (`id`, `celular`, `nome`, `email`, `usuario`, `senha`, `c
 
 --
 -- Índices para tabelas despejadas
+
 --
 
 ALTER TABLE `userregistroaposta`
@@ -128,6 +146,9 @@ ALTER TABLE `recover_solicitation`
 ALTER TABLE `usercadastrojogos`
   ADD PRIMARY KEY (`id`);
 
+
+ALTER TABLE `useradm`
+  ADD PRIMARY KEY (`id`);
 --
 -- Índices para tabela `usuarios`
 --
@@ -146,12 +167,16 @@ ALTER TABLE `recover_solicitation`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
+
+
 -- AUTO_INCREMENT de tabela `usercadastrojogos`
 --
 ALTER TABLE `usercadastrojogos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 
---
+ALTER TABLE `useradm`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`

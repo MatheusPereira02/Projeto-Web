@@ -24,8 +24,9 @@ if(!empty($_SESSION['id'])){
 	echo "" .$_SESSION['nome']."</br><!---->0,00 BRL<!----> </br>";
 }
 ?>
+<a class="btn btn-outline-primary" href="loginadm.php">Painel Administrativo</a>
 <a class="btn btn-outline-primary" href="apostas.php">Minhas Apostas</a>
-  <a class="btn btn-outline-primary" href="paginasair.php">Sair</a>
+<a class="btn btn-outline-primary" href="paginasair.php">Sair</a>
 </div>
 
 

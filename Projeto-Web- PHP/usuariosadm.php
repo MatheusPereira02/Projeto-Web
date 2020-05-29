@@ -1,9 +1,9 @@
 <?php
 session_start();
 include_once("protect.php");
-  protect();
+protect();
 include_once("conexao.php");
-?>
+?>>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -13,7 +13,8 @@ include_once("conexao.php");
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	</head>	
+    </head>	
+    <title>Usuários Administrativos</title>
 	<body background="img/001.jpg" >
 	<div class="container">
 	<div class="form-signin" style="background: #eeee">
@@ -21,13 +22,16 @@ include_once("conexao.php");
 	<img src="img/002.jpg" width="30" height="30" class="d-inline-block left-top">
   	<h5 class="my-1 mr-md-auto ">QUICK APOSTAS</h5>
 	</div>
-
-	<div class="text-center">
-		<h1>Lista Jogos Cadastrados</h1>
-	</div>
+	<body>
+    <div class="text-center">
+        <h1>Usuários Administratitvos</h1>
+    </div>
 		<?php
-	
-
+		if(isset($_SESSION['msg'])){
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+		}
+		
 		//Receber o número da página
 		$pagina_atual = filter_input(INPUT_GET,'pagina', FILTER_SANITIZE_NUMBER_INT);		
 		$pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
@@ -38,18 +42,18 @@ include_once("conexao.php");
 		//calcular o inicio visualização
 		$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
 		
-		$result_usuarios = "SELECT * FROM usercadastrojogos LIMIT $inicio, $qnt_result_pg";
+		$result_usuarios = "SELECT * FROM useradm LIMIT $inicio, $qnt_result_pg";
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
 		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
 			echo "ID: " . $row_usuario['id'] . "<br>";
-			echo "Campeonato: " . $row_usuario['campeonato'] . "<br>";
-			echo "Timedacasa: " . $row_usuario['timedacasa'] . "<br>";
-			echo "Timevisitante: " . $row_usuario['timevisitante'] . "<br>";
-			echo "Local Jogo: " . $row_usuario['localjogo'] . "<br>";
-			echo "Data do Jogo: " . $row_usuario['datajogo'] . "<br>";
-			echo "Horário: " . $row_usuario['horario'] . "<br>";
-			echo "valor: " . $row_usuario['valor'] . "<br></br>";
+			echo "Nome: " . $row_usuario['nome'] . "<br>";
+			echo "E-mail: " . $row_usuario['email'] . "<br>";
+            echo "Senha: " . $row_usuario['senha'] . "<br>";
+            echo "cargo: " . $row_usuario['cargo'] . "<br>";
+
 		}
+		
+		
 		?>		
 	</body>
 </html>
