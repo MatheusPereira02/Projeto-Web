@@ -10,7 +10,7 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/signin.css" rel="stylesheet">
 
-    <title>Area Restrita</title>
+    <title>Area Administrativa</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="css/signin.css" rel="stylesheet">

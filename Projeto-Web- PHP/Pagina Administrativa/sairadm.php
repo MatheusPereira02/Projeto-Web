@@ -8,5 +8,6 @@
 	);
 	
 	$_SESSION['loginDeslogado'] = "";
-	header("Location: paginainicial.php");
+	header("Location: ../Paginas Principais/administrativo.php");
+	
 ?>

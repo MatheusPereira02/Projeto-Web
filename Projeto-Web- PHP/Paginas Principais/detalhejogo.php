@@ -59,9 +59,9 @@
                 <div class="column" style="display: flex;  justify-content: center;">
                 <div class="card">
                             <div class="time_casa">
-                                <img src="./images/bandeira_brasil.PNG" width="240" height="100">
+                                <img src="img/flamengo.png" width="240" height="100">
                                 <div class="nome_time">
-                                   <p align="center"> Brasil
+                                   <p align="center"> Flamengo
                                 </div>
                             </div>
                         </div>
@@ -72,9 +72,9 @@
                             </div>
                             <div class="card">
                             <div class="time_fora">
-                                <img src="./images/bandeira_suica.jpg" width="240" height="100">
+                                <img src="img/vasco.png" width="240" height="100">
                                 <div class="nome_time">
-                                <p align="center"> Suíça
+                                <p align="center"> Vasco
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                    
             <div class="container-dados-aposta">
                 <button class="btn-success">
-                    Total de apostas <br>15631
+                    Total de apostas <br>2
                
             <div class="container-dados-aposta">
                 <button class="btn-dark">

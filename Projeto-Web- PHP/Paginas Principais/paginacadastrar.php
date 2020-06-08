@@ -92,7 +92,6 @@ if($btnCadUsuario){
 	<br><input type="radio" required="required"> <b>Certifico que tenho mais de 18 anos de idade e concordo com os termos. </p></b></br>
 					<input type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-primary" >
 					
-					
 				</form>
 				
 			</div>

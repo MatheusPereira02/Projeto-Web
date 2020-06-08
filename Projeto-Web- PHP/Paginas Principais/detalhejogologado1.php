@@ -59,9 +59,9 @@
                 <div class="column" style="display: flex;  justify-content: center;">
                 <div class="card">
                             <div class="time_casa">
-                                <img src="img/flamengo.png" width="240" height="100">
+                                <img src="img/fluminense.jpg" width="240" height="100">
                                 <div class="nome_time">
-                                   <p align="center"> FLAMENGO
+                                   <p align="center"> Fluminense
                                 </div>
                             </div>
                         </div>
@@ -72,9 +72,9 @@
                             </div>
                             <div class="card">
                             <div class="time_fora">
-                                <img src="img/vasco.png" width="240" height="100">
+                                <img src="img/botafogo.jpg" width="240" height="100">
                                 <div class="nome_time">
-                                <p align="center"> Vasco
+                                <p align="center"> Botafogo
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
 <br><br>
 <div class="text-center">
             <div class="registar-aposta">
-                <a href="registraraposta.php"class="btn btn-danger " role="button" >APOSTAR</br>AGORA</a>
+                <a href="registraraposta1.php"class="btn btn-danger " role="button" >APOSTAR</br>AGORA</a>
                 </a>
             </div>
         </div>

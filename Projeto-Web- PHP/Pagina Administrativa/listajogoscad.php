@@ -28,14 +28,13 @@ include_once("conexao/conexao.php");
 		<?php
 	
 
-		//Receber o número da página
+		
 		$pagina_atual = filter_input(INPUT_GET,'pagina', FILTER_SANITIZE_NUMBER_INT);		
 		$pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
 		
-		//Setar a quantidade de itens por pagina
+		
 		$qnt_result_pg = 5;
 		
-		//calcular o inicio visualização
 		$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
 		
 		$result_usuarios = "SELECT * FROM usercadastrojogos LIMIT $inicio, $qnt_result_pg";

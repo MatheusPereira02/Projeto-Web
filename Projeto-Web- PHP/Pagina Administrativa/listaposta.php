@@ -2,8 +2,8 @@
 <?php
 	session_start();
 	include_once("protect.php");
-protect();
-	include_once("conexao/conexao.php")
+	protect();
+	include_once("conexao/conexao.php");
 	
 ?>
 <!DOCTYPE html>

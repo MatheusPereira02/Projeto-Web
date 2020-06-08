@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang ="PT-BR">
 <head>
@@ -27,8 +26,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a class="nav-link" href="loginadm.php">Painel Administrativo</a>
-        <a class="nav-link" href="apostas.php">Minhas Apostas</a>
-        <a class="nav-link" href="">Minha Conta </a>
+        <a class="nav-link" href="minhasapostas.php">Minhas Apostas</a>
+        <a class="nav-link" href="minhaconta.php">Minha Conta </a>
         <a class="nav-link" href="">Comprar Cash</a>
         <a class="nav-link" href="paginasair.php">Sair</a>
       </li>
@@ -48,9 +47,9 @@
 
 <ul class="list-group list-group-horizontal">
   <li class="list-group-item"><a href="detalhejogologado.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>FLAMENGO<!---->  0  VASCO<!-- --> 0</strong></br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>FLUMINENSE<!-- -->  0  BOTAFOGO<!-- --> 0</strong><br>SÉRIA A</a></li>
-  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>AVAI<!---->  0  FORTALEZA<!-- --> 0</strong><br>SÉRIA A </a></li>
-  <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>GREMIO<!-- -->  0  CORINTHIAS<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="detalhejogologado1.php" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>FLUMINENSE<!-- -->  0  BOTAFOGO<!-- --> 0</strong><br>SÉRIA A</a></li>
+  <li class="list-group-item"><a href="detalhejogologado2.php" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>AVAI<!---->  0  FORTALEZA<!-- --> 0</strong><br>SÉRIA A </a></li>
+  <li class="list-group-item"><a href="detalhejogologado3.php" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>GREMIO<!-- -->  0  CORINTHIAS<!-- --> 0</strong><br>SÉRIA A</a></li>
   <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>CHAPECOENSE<!---->  0  VITORIA<!-- --> 0</strong><br>SÉRIA A </a></li>
   <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-success" p align="Center">ENCERRADO </p><strong>CRUZEIRO<!-- -->  0  GOÍAS<!-- --> 0</strong><br>SÉRIA A</a></li>
   <li class="list-group-item"><a href="" class="list-group-item list-group-item-action" ><p class="text-danger" p align="Center">AO VIVO </p><strong>CORITIBA<!---->  0  SANTOS<!-- --> 0</strong><br>SÉRIA A </a></li>

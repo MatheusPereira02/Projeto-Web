@@ -2,8 +2,8 @@
 <html lang ="PT-BR">
 <head>
 
-	<title>Apostas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<title>Apostas</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -59,9 +59,9 @@
                 <div class="column" style="display: flex;  justify-content: center;">
                 <div class="card">
                             <div class="time_casa">
-                                <img src="img/flamengo.png" width="240" height="100">
+                                <img src="img/gremio.png" width="240" height="100">
                                 <div class="nome_time">
-                                   <p align="center"> FLAMENGO
+                                   <p align="center"> Gremio
                                 </div>
                             </div>
                         </div>
@@ -72,9 +72,9 @@
                             </div>
                             <div class="card">
                             <div class="time_fora">
-                                <img src="img/vasco.png" width="240" height="100">
+                                <img src="img/corinthians.png" width="240" height="100">
                                 <div class="nome_time">
-                                <p align="center"> Vasco
+                                <p align="center"> Fortaleza
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
 <br><br>
 <div class="text-center">
             <div class="registar-aposta">
-                <a href="registraraposta.php"class="btn btn-danger " role="button" >APOSTAR</br>AGORA</a>
+                <a href="registraraposta3.php"class="btn btn-danger " role="button" >APOSTAR</br>AGORA</a>
                 </a>
             </div>
         </div>

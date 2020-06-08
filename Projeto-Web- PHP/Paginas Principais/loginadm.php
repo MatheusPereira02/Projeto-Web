@@ -1,6 +1,6 @@
 <?php
   session_start();
-
+  header("Location: ../Pagina Administrativa/administração.php")
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

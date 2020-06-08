@@ -1,8 +1,4 @@
-<?php
-session_start();
-?>
-
-<html lang="en">
+<html lang="pt-br">
     <head>
     <meta charset="utf-8">
     <title>Apostar</title>
@@ -53,12 +49,12 @@ session_start();
     </div>
     </div>
     </div>
-
+    
 
     <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
+            unset($_SESSION['msg']);
 		}
 		?>
 
@@ -66,14 +62,15 @@ session_start();
   <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm" >
     <div class="ui large header"> <p class="font-weight-bolder">Registrar uma aposta
     </br>Preencha os campos com os resultados desejados e a quantidade de apostas</p>
-     </div>
+    </div>
     </div>
     </br>
     <form method="POST" action="processaaposta.php">
-    
-<div class="card">
+        
+        <div class="card">
             <p align="center">
-            FLAMENGO<img src="img/flamengo.png" width="180" height="100"><img src="img/vasco.png" width="180" height="100">VASCO</br>
+            FLUMINENSE<img src="img/fluminense.jpg" width="160" height="100"><img src="img/botafogo.jpg" width="180" height="100">BOTAFOGO</br>
+            
 			<input type="number" name="timedacasa">
 			<input type="number" name="timedefora">
              </p></br>
@@ -81,6 +78,9 @@ session_start();
                    
              <div class="column" style="display: flex;  justify-content: center;">
                     <div class="card">
+                    <label>Nome:</label>
+            <input type="text" name="nome">
+                    
                     <p align="center">APOSTAR</p>
 		   <input name="numero" id="numero" onblur="multiplica()"><p align="center"> x R$ 10,00<br><br>
            TOTAL:R$<input name="total" readonly id="total"></span></br>
