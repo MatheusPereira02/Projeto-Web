@@ -27,27 +27,47 @@ include_once("conexao/conexao.php");
 	</div>
 		<?php
 	
-
-		
-		$pagina_atual = filter_input(INPUT_GET,'pagina', FILTER_SANITIZE_NUMBER_INT);		
-		$pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
-		
-		
-		$qnt_result_pg = 5;
-		
-		$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
-		
-		$result_usuarios = "SELECT * FROM usercadastrojogos LIMIT $inicio, $qnt_result_pg";
-		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
-		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
-			echo "ID: " . $row_usuario['id'] . "<br>";
-			echo "Campeonato: " . $row_usuario['campeonato'] . "<br>";
-			echo "Timedacasa: " . $row_usuario['timedacasa'] . "<br>";
-			echo "Timevisitante: " . $row_usuario['timevisitante'] . "<br>";
-			echo "Local Jogo: " . $row_usuario['localjogo'] . "<br>";
-			echo "Data do Jogo: " . $row_usuario['datajogo'] . "<br>";
-			echo "Horário: " . $row_usuario['horario'] . "<br>";
-			echo "valor: " . $row_usuario['valor'] . "<br></br>";
+	$result_usuario = "SELECT * FROM usercadastrojogos ORDER BY id";
+	$resultado_usuario = mysqli_query($conn, $result_usuario);
+	
+	
+	if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
+		?>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Campeonato</th>
+					<th>Time da casa</th>
+					<th>Time Visitante</th>
+					<th>localjogo</th>
+					<th>datajogo</th>
+					<th>horário</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
+					?>
+					<tr>
+						<td><?php echo $row_usuario['id']; ?></td>
+						<td><?php echo $row_usuario['campeonato']; ?></td>
+						<td><?php echo $row_usuario['timedacasa']; ?></td>
+						<td><?php echo $row_usuario['timevisitante']; ?></td>
+						<td><?php echo $row_usuario['localjogo']; ?></td>
+						<td><?php echo $row_usuario['datajogo']; ?></td>
+						<td><?php echo $row_usuario['horario']; ?></td>
+						<td><?php echo $row_usuario['valor']; ?></td>
+	
+					</tr>
+					<?php
+				}?>
+			</tbody>
+		</table>
+	<?php
+	}else{
+		echo "<div class='alert alert-danger' role='alert'>Nenhum usuário encontrado!</div>";
 		}
 		?>		
 	</body>

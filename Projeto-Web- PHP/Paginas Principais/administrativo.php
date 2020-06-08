@@ -1,3 +1,8 @@
+<?php
+include_once("protect.php");
+protect();
+?>
+
 <!DOCTYPE html>
 <html lang ="PT-BR">
 <head>
@@ -36,9 +41,8 @@
   </nav>
 
   <?php
-  session_start();
   if(!empty($_SESSION['id'])){
-	echo "" .$_SESSION['nome']."</br><!---->0,00 BRL<!----> </br>";
+  echo "" .$_SESSION['nome']."</br><!---->0,00 BRL<!----> </br>";
 }
 ?>
 </div>

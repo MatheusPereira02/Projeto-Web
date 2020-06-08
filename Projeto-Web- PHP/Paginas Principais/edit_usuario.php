@@ -1,5 +1,7 @@
 <?php
 session_start();
+include_once("protect.php");
+protect();
 include_once("conexao.php");
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $result_usuario = "SELECT * FROM usuarios WHERE id = '$id'";
@@ -42,7 +44,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 			<input type="email" name="email"   value="<?php echo $row_usuario['email']; ?>"><br><br>
 
 			<label>Senha:</label>
-			<input type = "password" name= "senha"  value="<?php echo $row_usuario['senha']; ?>"><br><br>
+			<input type = "password" name= "senha"  disabled value="<?php echo $row_usuario['senha']; ?>"><br><br>
 
 			<label>Usuário:</label>
 			<input type = "text" name= "usuario" disabled value="<?php echo $row_usuario['usuario']; ?>"><br><br>

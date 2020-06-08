@@ -1,5 +1,8 @@
 <?php
+include_once("protect.php");
+protect();
 include_once("conexao.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -27,7 +30,7 @@ include_once("conexao.php");
 				
 
 	 <?php
-$result_usuario = "SELECT * FROM usuarios WHERE id = '17'";
+$result_usuario = "SELECT * FROM usuarios WHERE id = '1'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 	?>

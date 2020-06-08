@@ -29,36 +29,47 @@
         <h1>Apostas Cadastradas</h1>
     </div>
 		<?php
-		if(isset($_SESSION['msg'])){
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
-		}
 		
-		//Receber o número da página
-		$pagina_atual = filter_input(INPUT_GET,'pagina', FILTER_SANITIZE_NUMBER_INT);		
-		$pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
-		
-		//Setar a quantidade de itens por pagina
-		$qnt_result_pg = 5;
-		
-		//calcular o inicio visualização
-		$inicio = ($qnt_result_pg * $pagina) - $qnt_result_pg;
-		
-		$result_usuarios = "SELECT * FROM userregistroaposta LIMIT $inicio, $qnt_result_pg";
-		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
-		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
-			echo "ID: " . $row_usuario['id'] . "<br>";
-			echo "Nome: " .$row_usuario['nome']."</br>";
-			echo "timedacasa: " . $row_usuario['timedacasa'] ."<br>";
-            echo "timedefora: " . $row_usuario['timedefora'] . "<br>";
-            echo "Aposta: " . $row_usuario['total'] . "<br>";
-			echo "Valor: " . $row_usuario['numero'] . "<br></br>";
-			
-            
+		$result_usuario = "SELECT * FROM userregistroaposta ORDER BY id ";
+$resultado_usuario = mysqli_query($conn, $result_usuario);
 
-		}
-		
-		
+
+//Verificar se encontrou resultado na tabela "usuarios"
+if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
+	?>
+	<table class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Time da casa</th>
+				<th>Time Visitante</th>
+				<th>Aposta</th>
+				<th>Valor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+			while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
+				?>
+				<tr>
+					<td><?php echo $row_usuario['id']; ?></td>
+					<td><?php echo $row_usuario['nome']; ?></td>
+					<td><?php echo $row_usuario['timedacasa']; ?></td>
+					<td><?php echo $row_usuario['timedefora']; ?></td>
+					<td><?php echo $row_usuario['total']; ?></td>
+					<td><?php echo $row_usuario['numero']; ?></td>
+
+				</tr>
+				<?php
+			}?>
+		</tbody>
+	</table>
+<?php
+}else{
+	echo "<div class='alert alert-danger' role='alert'>Nenhum aposta encontrado!</div>";
+}
 		?>		
 	</body>
 </html>

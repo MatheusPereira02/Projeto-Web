@@ -1,5 +1,7 @@
 <?php
 session_start();
+include_once("protect.php");
+protect();
 ?>
 
 <html lang="en">
@@ -101,7 +103,7 @@ session_start();
     function getValor(valor_campo)
     {
 	var valor = document.getElementById(valor_campo).value.replace( ',', '.');
-	return parseFloat( valor ) * 100;
+	return parseFloat( valor ) * 1;
     }
 
     function multiplica()

@@ -1,5 +1,7 @@
 
 <?php
+include_once("protect.php");
+protect();
   include_once("conexao.php");
 
 ?>
@@ -138,7 +140,7 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
           <?php
 
           
-$result_usuario = "SELECT * FROM userregistroaposta WHERE id = '14'";
+$result_usuario = "SELECT * FROM userregistroaposta WHERE id = '2'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 	?>
@@ -210,7 +212,7 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
           <?php
 
           
-$result_usuario = "SELECT * FROM userregistroaposta WHERE id = '15'";
+$result_usuario = "SELECT * FROM userregistroaposta WHERE id = '3'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 	?>
@@ -282,7 +284,7 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
           <?php
 
           
-$result_usuario = "SELECT * FROM userregistroaposta WHERE id = '16'";
+$result_usuario = "SELECT * FROM userregistroaposta WHERE id = '4'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 	?>
